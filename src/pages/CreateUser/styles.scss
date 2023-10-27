@@ -1,0 +1,132 @@
+.create-user-container {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+.header-page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  strong {
+    color: #47525e;
+    font-size: 20px;
+    line-height: 34px;
+    width: 400px;
+    text-align: left;
+  }
+
+  span {
+    color: #666666;
+    font-size: 18px;
+    line-height: 28px;
+    width: 606px;
+    text-align: left;
+    font-weight: 300;
+  }
+}
+
+.create-user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 280px;
+  width: 100%;
+
+  div {
+    input {
+      background-color: #ffffff;
+      border: 1px solid #8492a6;
+      border-radius: 5px;
+      width: 264px;
+      height: 50px;
+      padding-left: 14px;
+      color: #666666;
+      font-size: 18px;
+      font-weight: 400;
+      transition: border-color 0.2s;
+
+      &:hover {
+        border: 1px solid #47525e;
+      }
+
+      &:focus {
+        outline: 2px solid #e29933;
+        border: 0;
+      }
+    }
+    p {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.select-style {
+  background-color: #ffffff;
+  border: 1px solid #8492a6;
+  border-radius: 5px;
+  width: 264px;
+  height: 50px;
+  padding: 0 14px;
+  color: #666666;
+  font-size: 18px;
+
+  &:hover {
+    border: 1px solid #47525e;
+  }
+
+  &:focus {
+    outline: 2px solid #e29933;
+    border: 0;
+  }
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 55px;
+
+  .create-button {
+    background-color: #e29933;
+    border: 1px solid #e29933;
+    border-radius: 5px;
+    width: 132px;
+    height: 44px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #ffffff;
+      border: 1px solid #e29933;
+      color: #e29933;
+    }
+  }
+
+  .go-back-button {
+    background-color: rgba(226, 153, 51, 0);
+    border: 1px solid #e29933;
+    border-radius: 5px;
+    width: 132px;
+    height: 44px;
+    color: #e29933;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #e29933;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+    }
+  }
+}

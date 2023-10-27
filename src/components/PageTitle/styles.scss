@@ -1,0 +1,22 @@
+.page-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 58px auto;
+  max-width: 1076px;
+  width: 100%;
+
+  img {
+    background-color: rgba(255, 255, 255, 0);
+    width: 37px;
+    height: 37px;
+    margin-right: 1.46%;
+  }
+
+  h2 {
+    color: #333333;
+    font-size: 28px;
+    line-height: 34px;
+    width: 400px;
+  }
+}

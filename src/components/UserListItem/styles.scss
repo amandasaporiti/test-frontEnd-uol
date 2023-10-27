@@ -1,0 +1,78 @@
+.user-data {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 33px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    p {
+      color: #666666;
+      font-size: 18px;
+      line-height: 23px;
+      text-align: left;
+    }
+
+    span {
+      color: #666666;
+      font-size: 18px;
+      line-height: 23px;
+      text-align: left;
+      font-weight: 300;
+    }
+  }
+
+  button {
+    background-color: rgba(226, 153, 51, 0);
+    border: 1px solid #e29933;
+    border-radius: 5px;
+    width: 132px;
+    height: 44px;
+    color: #e29933;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #e29933;
+      color: #ffffff;
+    }
+  }
+
+  .status-highlight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before {
+      content: '';
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      content: '';
+    }
+
+    &.ativo::before {
+      background-color: green;
+    }
+
+    &.aguardando::before {
+      background-color: orange;
+    }
+
+    &.inativo::before {
+      background-color: red;
+    }
+
+    &.desativado::before {
+      background-color: gray;
+    }
+  }
+}
