@@ -36,7 +36,12 @@ export function UserContextProvider({ children }: UserContextProviderProps) {
   }
 
   useEffect(() => {
-    fetchUsers()
+    const storedUsers = localStorage.getItem('@UolHost:users')
+    if (storedUsers) {
+      setUsers(JSON.parse(storedUsers))
+    } else {
+      fetchUsers()
+    }
   }, [])
 
   const newUsersArray = users.map((data) => {
@@ -44,7 +49,9 @@ export function UserContextProvider({ children }: UserContextProviderProps) {
   })
 
   function createUser(newUser: User) {
-    setUsers((prevUsers) => [...prevUsers, newUser])
+    setUsers((users) => [...users, newUser])
+
+    localStorage.setItem('@UolHost:users', JSON.stringify([...users, newUser]))
   }
 
   function updateUser(updatedUser: User) {
@@ -70,10 +77,9 @@ export function UserContextProvider({ children }: UserContextProviderProps) {
   ]
 
   const formatPhone = (inputTextField: string) => {
-    // Remove non-numeric characters
+    // Remove caracteres não numéricos
     const numericValue = inputTextField.replace(/\D/g, '')
 
-    // Apply the phone format using regex
     const formattedPhone = numericValue.replace(
       /(\d{2})(\d{5})(\d{4})/,
       '($1)$2-$3',
