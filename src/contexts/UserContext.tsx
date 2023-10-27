@@ -59,10 +59,12 @@ export function UserContextProvider({ children }: UserContextProviderProps) {
       if (user.id === updatedUser.id) {
         return { ...updatedUser }
       }
-      return user // return users that don't need to be updated
+      return user
     })
 
     setUsers(updatedUsers)
+
+    localStorage.setItem('@UolHost:users', JSON.stringify(updatedUsers))
   }
 
   function setFirstLetterToUpperCase(status: string) {
